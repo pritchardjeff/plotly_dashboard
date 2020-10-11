@@ -63,13 +63,14 @@ function buildCharts(sample) {
     var sampleFilter = samplesArray.filter(samp => samp.id ==sample);
     //  5. Create a variable that holds the first sample in the array.
     var sampleFilterFirst = sampleFilter[0];
-    var washFrequency = parseInt(data.wfreq);
+    
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     var otu_ids = sampleFilterFirst.otu_ids;
     var otu_labels = sampleFilterFirst.otu_labels;
     var sample_values = sampleFilterFirst.sample_values;
-
+    var wfreq = sampleFilterFirst.metadata.wfreq;
+    console.log(wfreq)
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
     //  so the otu_ids with the most bacteria are last. 
@@ -124,7 +125,7 @@ function buildCharts(sample) {
      // 4. Create the trace for the gauge chart.
     var gaugeData = [{
       type: "indicator",
-      value: washFrequency,
+      value: wfreq,
       mode: "gauge+number",
       title:{
         text: "Belly Button Washing Frequency"
