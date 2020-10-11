@@ -63,6 +63,7 @@ function buildCharts(sample) {
     var sampleFilter = samplesArray.filter(samp => samp.id ==sample);
     //  5. Create a variable that holds the first sample in the array.
     var sampleFilterFirst = sampleFilter[0];
+    var washFrequency = value(meta.wfreq);
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     var otu_ids = sampleFilterFirst.otu_ids;
@@ -123,6 +124,7 @@ function buildCharts(sample) {
      // 4. Create the trace for the gauge chart.
     var gaugeData = [{
       type: "indicator",
+      value: washFrequency,
       mode: "gauge+number",
       title:{
         text: "Belly Button Washing Frequency"
