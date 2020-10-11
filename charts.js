@@ -103,6 +103,7 @@ function buildCharts(sample) {
         mode: "markers",
         marker: {
           size: sample_values,
+          color: [1,2,3,4,5,6,7,8,9,10],
           autocolorscale: true 
         }
       }];
