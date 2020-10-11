@@ -128,10 +128,10 @@ function buildCharts(sample) {
         text: "Belly Button Washing Frequency"
       },
       gauge: {
-        axis: {range: [,10]},
+        axis: {range: [null,10]},
         bar: {color: "k"},
         steps: [
-          {range: [,2], color: "r"},
+          {range: [0,2], color: "r"},
           {range: [2,4], color: "darkorange"},
           {range: [4,6], color: "y"},
           {range: [6,8], color: "lime"},
